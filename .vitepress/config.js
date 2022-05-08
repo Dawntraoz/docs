@@ -30,12 +30,20 @@ const Guide = [
     link: '/guide/exporting',
   },
   {
+    text: 'Static Hosting',
+    link: '/guide/hosting',
+  },
+  {
     text: 'Record Presentation',
     link: '/guide/recording',
   },
   {
     text: 'Presenter Mode',
     link: '/guide/presenter-mode',
+  },
+  {
+    text: 'Drawing & Annotations',
+    link: '/guide/drawing',
   },
   {
     text: 'Editor Integrations',
@@ -78,6 +86,30 @@ const Translations = [
     text: 'Español',
     link: 'https://es.sli.dev{{pathname}}',
   },
+  {
+    text: 'Русский',
+    link: 'https://ru.sli.dev{{pathname}}',
+  },
+  {
+    text: 'Việt Nam',
+    link: 'https://vn.sli.dev{{pathname}}',
+  },
+  {
+    text: 'Deutsch',
+    link: 'https://de.sli.dev{{pathname}}',
+  },
+  {
+    text: 'Português (BR)',
+    link: 'https://br.sli.dev{{pathname}}',
+  },
+  {
+    text: 'Ελληνικά',
+    link: 'https://el.sli.dev{{pathname}}',
+  },
+  {
+    text: '日本語',
+    link: 'https://ja.sli.dev{{pathname}}',
+  },
 ]
 
 const Customizations = [
@@ -88,6 +120,10 @@ const Customizations = [
   {
     text: 'Directory Structure',
     link: '/custom/directory-structure',
+  },
+  {
+    text: 'Fonts',
+    link: '/custom/fonts',
   },
   {
     text: 'Highlighters',
@@ -117,12 +153,28 @@ const Customizations = [
     text: 'Configure Mermaid',
     link: '/custom/config-mermaid',
   },
+  {
+    text: 'Configure Shortcuts',
+    link: '/custom/config-shortcuts',
+  },
+  {
+    text: 'Vue Global Context',
+    link: '/custom/vue-context',
+  },
+  {
+    text: 'Global Layers',
+    link: '/custom/global-layers',
+  }
 ]
 
 const Resources = [
   {
     text: 'Showcases',
     link: '/showcases',
+  },
+  {
+    text: 'Learning Resources',
+    link: '/resources/learning',
   },
   {
     text: 'Curated Covers',
@@ -183,6 +235,15 @@ module.exports = {
     docsBranch: 'main',
     editLinks: true,
     editLinkText: 'Suggest changes to this page',
+
+    algolia: {
+      apiKey: '1a5c5a504139c58f428974c78c55291d',
+      indexName: 'slidev',
+      searchParameters: {
+        // for translations maintainers: change the filter to your locale code (subdomain name)
+        facetFilters: ['language:en']
+      }
+    },
 
     nav: [
       {

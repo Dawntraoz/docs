@@ -21,7 +21,7 @@ The second column
 </div>
 ```
 
-Go further, you can customize the size of each columns like:
+Go further, you can customize the size of each column like:
 
 ```html
 <div class="grid grid-cols-[200px,1fr,10%] gap-4">
@@ -115,4 +115,17 @@ Changing the canvas' actual size will scale all your contents(text, images, comp
 # since the canvas gets smaller, the visual size will become larger
 canvasWidth: 800
 ---
+```
+
+### Use Transform
+
+We provide a built-in component `<Transform />`, which is a thin wrapper of CSS transform property.
+
+```md
+<Transform :scale="1.4">
+
+- Item 1
+- Item 2
+
+</Transform>
 ```
